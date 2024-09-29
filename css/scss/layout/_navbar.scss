@@ -1,0 +1,143 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/typography-variables' as t;
+
+.navbar {
+position: relative;
+padding: 1rem 2rem;
+background-color: c.$clr-bg;
+
+.skip-link {
+   position: absolute;
+   top: 5rem;
+   left: -100vw;
+   display: inline-block;
+   outline: none;
+   padding: 1rem;
+   background-color: c.$clr-bg;
+   border: 1px solid c.$clr-primary;
+   border-radius: 0 0.6rem 0.6rem 0;
+   transition: 250ms;
+
+   &:focus { 
+      left: 0;
+   }
+}
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-block: 0.5rem;
+   position: relative;
+}
+
+
+// Silicon logotype
+.navbar__logo {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   
+   &-name {      
+      @include t.font(22, 800);
+      color: c.$clr-1;
+   }
+}
+
+
+// Phone menu-button
+.navbar__menu-toggle {
+   display: none; 
+
+   // @include b.breakpoint(768, max) {
+   //    display: block;
+   //    background: none;
+   //    border: none;
+   //    font-size: 1.5rem;
+   //    cursor: pointer;
+   // }
+ }
+
+// Navbar menu
+.main-menu {
+ 
+   flex-direction: column;
+   justify-content: space-between;
+   margin-left: 3.5rem;   
+   
+
+   .navbar__link {
+      @include t.nav-text()    
+   }
+}
+
+
+// Darkmode toggle
+.navbar__darkmode-toggle {
+   // position: absolute;
+   // right: 11.25rem;
+   // z-index: 1000;
+  
+   
+   .navbar__darkmode-label {
+      // Different shade of grey compared to 'nav-item' in desktop design file
+      @include t.nav-text($color: c.$clr-grey-700, $hover-color: c.$clr-grey-700); 
+      padding-right: 0.5em;
+   }
+
+
+   .navbar__darkmode-switch {
+      --_w: 2.875rem;
+      --_h: 1.5rem;
+
+      width: var(--_w);
+      height: var(--_h);
+      position: relative;
+      flex-shrink: 0;
+      display: inline-block;
+
+      // Hide default checkbox
+      input[type="checkbox"] {
+         width: 0;
+         height: 0;
+         opacity: 0;
+      }
+      
+      .navbar__darkmode-slider {
+         position: absolute;
+         cursor: pointer;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: c.$clr-grey-600;
+         border-radius: 100vw;
+         transition: 300ms all ease-in-out;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 0.125rem;
+            left: 0.125rem;
+            height: calc(100% - 0.25em);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: c.$clr-btn-toggle-slider;
+
+            transition: 300ms all ease-in-out;
+         }
+      }
+      
+      input[type="checkbox"]:checked + .navbar__darkmode-slider::before {
+         left: calc(100% - var(--_h) + 0.125em);
+      }
+      input[type="checkbox"]:checked + .navbar__darkmode-slider {
+         background-color: c.$clr-primary;
+      }
+   }
+}
+
+
+
+}

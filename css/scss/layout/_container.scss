@@ -1,0 +1,17 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/functions' as f;
+
+.container {
+   // FÖR VISUALISERING  ---  TA BORT
+   // outline: 1px dashed red;
+   
+   width: 100%;
+   margin-inline: auto;
+   padding-inline: 0.75rem;
+   
+   @include b.breakpoint(576) { width: f.rem(540); }
+   @include b.breakpoint(768) { width: f.rem(720); }
+   @include b.breakpoint(992) { width: f.rem(960); }
+   @include b.breakpoint(1200) { width: f.rem(1140); }
+   @include b.breakpoint(1400) { width: f.rem(1320); }
+}

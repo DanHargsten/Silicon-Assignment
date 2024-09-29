@@ -1,0 +1,42 @@
+@use '../abstracts/button-variables' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+
+.btn-primary {
+   @include b.btn-primary();
+}
+
+.btn-small {
+   @include b.btn-size('small');
+}
+
+
+
+.btn-market {
+   width: 100%;
+   border-radius: 0.5rem;
+   // background-color: c.$clr-text-1;
+   color: c.$clr-btn-text-primary;
+   padding: 0.5em 1em;
+   
+   img {
+      height: 3em;
+   }
+
+   &:hover {
+
+   }
+}
+
+.btn-circle {
+   i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.75rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      font-size: 1rem;
+      color: c.$clr-btn-text-circle;
+   }
+}

@@ -1,0 +1,39 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/functions' as fun;
+@use '../abstracts/fonts' as f;
+
+
+
+@mixin font($size, $weight: 400) {
+   font-size: fun.rem($size);
+   font-weight: $weight;
+}
+
+@mixin display-text-style($size, $color: c.$clr-grey-800, $weight: 800) {
+   font-size: $size;
+   color: $color;
+   font-weight: $weight;
+}
+
+@mixin heading-text-style($size, $color: c.$clr-grey-900, $weight: 800) {
+   font-size: $size;
+   font-weight: $weight;
+   color: $color;
+}
+
+@mixin body-text-style($size: f.$fs-m, $color: c.$clr-grey-700, $weight: 400) {
+   font-size: $size;
+   color: $color;
+   font-weight: $weight;
+}
+
+@mixin nav-text($size: f.$fs-nav, $color: c.$clr-nav, $weight: 600, $hover-color: c.$clr-primary) {
+   font-size: $size;
+   color: $color;
+   font-weight: $weight;
+
+   &:hover,
+   &:focus-visible {
+      color: $hover-color;
+   }
+}

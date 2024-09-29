@@ -1,0 +1,28 @@
+@use '../abstracts/typography-variables' as t;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/colors' as c;
+
+
+
+// Display Headings  
+.fs-d1 { @include t.display-text-style(f.$fs-d1); }
+.fs-d2 { @include t.display-text-style(f.$fs-d2); }
+.fs-d3 { @include t.display-text-style(f.$fs-d3); }
+.fs-d4 { @include t.display-text-style(f.$fs-d4); }
+.fs-d5 { @include t.display-text-style(f.$fs-d5); }
+.fs-d6 { @include t.display-text-style(f.$fs-d6); }
+
+// Headings
+h1 { @include t.heading-text-style(f.$fs-h1); }
+h2 { @include t.heading-text-style(f.$fs-h2); }
+h3 { @include t.heading-text-style(f.$fs-h3); }
+h4 { @include t.heading-text-style(f.$fs-h4); }
+h5 { @include t.heading-text-style(f.$fs-h5); }
+h6 { @include t.heading-text-style(f.$fs-h6); }
+
+// Body text
+.f-xl { @include t.body-text-style(f.$fs-xl) }
+.f-l { @include t.body-text-style(f.$fs-l) }
+.f-m { @include t.body-text-style(f.$fs-m) }
+.f-s { @include t.body-text-style(f.$fs-s) }
+.f-xs { @include t.body-text-style(f.$fs-xs) }
