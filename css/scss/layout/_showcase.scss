@@ -1,0 +1,107 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/typography-variables' as tv;
+@use '../base/typography-style' as ts;
+
+.showcase {
+   padding-top: 2rem;
+   background-image: c.$clr-bg-gradient;
+ 
+   .container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "headline"
+         "content";                 
+     
+      gap: 2rem;
+      justify-items: center;
+      align-items: center;
+ 
+     @include b.breakpoint(768) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto;
+         grid-template-areas:
+            "headline headline"
+            "content image";
+     }
+     @include b.breakpoint(1200) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto;
+         grid-template-areas:
+            "headline image"
+            "content image";
+     }
+   }
+
+   .showcase__headline {      
+      grid-area: headline;
+      text-align: center;
+      margin-inline: auto;
+      line-height: 1.2;
+      @include tv.display-text-style(f.$fs-d6);
+      width: 80%;
+
+      @include b.breakpoint(768) {
+         @include tv.display-text-style(f.$fs-d5);
+      }
+      @include b.breakpoint(1200) {          // 1400
+         @include tv.display-text-style(f.$fs-d4);
+      }
+   }
+
+    &__content {
+      grid-area: content;
+      padding-left: 2rem;
+      text-align: center;
+
+      @include b.breakpoint(768) {
+         text-align: left;
+       }
+       &-text {
+         @include tv.body-text-style(f.$fs-lg);
+         padding-top: 1.5rem;
+         // width: 80%;
+         margin-inline: auto;
+         text-wrap: pretty;
+       }
+    }
+
+   .showcase__buttons {
+      margin-top: 3rem;       // make helper
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;              // make helper
+
+      @include b.breakpoint(768) { flex-direction: row; }
+   }
+
+   .showcase__more {
+      padding-top: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+
+
+      &-text {
+         @include tv.body-text-style(f.$fs-sm, c.$clr-2);
+      }
+   }
+
+
+   // Phone image
+   &__image {
+      grid-area: image;
+      margin-right: 2.1875rem;
+      margin-top: 2rem;
+      display: none;
+
+      @include b.breakpoint(768) {
+         display: block;
+         
+      }
+   }
+}

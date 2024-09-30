@@ -1,30 +1,44 @@
-@use '../abstracts/button-variables' as b;
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/button-variables' as bv;
 @use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 
 .btn-primary {
-   @include b.btn-primary();
+   @include bv.btn-primary();
 }
 
 .btn-small {
-   @include b.btn-size('small');
+   @include bv.btn-size('small');
 }
 
 
 
 .btn-market {
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;  
    width: 100%;
    border-radius: 0.5rem;
-   // background-color: c.$clr-text-1;
+   background-color: c.$clr-1;
    color: c.$clr-btn-text-primary;
    padding: 0.5em 1em;
-   
+
+   @include b.breakpoint(768) {
+      width: auto;
+      padding: 0.6em 1.3em;
+   }
+
    img {
       height: 3em;
+
+      @include b.breakpoint(768) {
+         height: 2em;
+      }
    }
 
    &:hover {
-
+      background-color: hsl(from c.$clr-1 h s calc(l + 5));
    }
 }
 
@@ -38,5 +52,7 @@
       border-radius: 50%;
       font-size: 1rem;
       color: c.$clr-btn-text-circle;
+      background-color: c.$clr-btn-round;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
    }
 }

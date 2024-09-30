@@ -22,7 +22,7 @@ h6 { @include t.heading-text-style(f.$fs-h6); }
 
 // Body text
 .f-xl { @include t.body-text-style(f.$fs-xl) }
-.f-l { @include t.body-text-style(f.$fs-l) }
-.f-m { @include t.body-text-style(f.$fs-m) }
-.f-s { @include t.body-text-style(f.$fs-s) }
+.f-lg { @include t.body-text-style(f.$fs-lg) }
+.f-md { @include t.body-text-style(f.$fs-md) }
+.f-sm { @include t.body-text-style(f.$fs-sm) }
 .f-xs { @include t.body-text-style(f.$fs-xs) }

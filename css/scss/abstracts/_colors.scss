@@ -5,24 +5,26 @@ $clr-grey-400: #D4D7E5;
 $clr-grey-500: #B4B7C9;
 $clr-grey-600: #9397AD;
 $clr-grey-700: #565973;
-$clr-grey-800: #33354D;
+$clr-grey-800: #33354D;  
 $clr-grey-900: #0B0F19;
 
 $clr-primary: #6366F1;
 $clr-info: #4C82F7;
 $clr-nav: #33354D;
 
-$clr-1: #131022; // KOLLA UPP
+$clr-1: #131022; // KOLLA UPP    market-btn
+$clr-2: #585C7B; // KOLLA UPP    discover more
 
 
 $clr-bg: #FFFFFF;
 $clr-bg-gradient: linear-gradient(to top,
 rgba(99,102,241,0.15) 0%,
 rgba(218,70,239,0.05) 42%,
-rgba(0,0,0,0.07) 83%);
+rgba(0,0,0,0.02) 83%);
 
 $clr-btn-text-primary: #FFFFFF;
 $clr-btn-text-circle: #3E4265;
 $clr-btn-toggle-slider: #FFFFFF;
+$clr-btn-round: #FFFFFF;
 
 $clr-btn-hover-primary: hsl(from $clr-primary h s calc(l - 5));
