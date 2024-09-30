@@ -1,2 +1,17 @@
+// HJÄLP MED VISUALISERING
 .border1 { border: 1px dashed darkorange; }
 .border2 { border: 2px dashed hotpink; }
+
+
+// Padding
+.p-0 { padding: 0.5em; }
+.p-1 { padding: 1em; }
+.p-2 { padding: 2em ; }
+.p-3 { padding: 3em ; }
+.p-4 { padding: 4em ; }
+
+
+
+.spacing-y > * + * {
+   margin-top: 3rem;
+ }

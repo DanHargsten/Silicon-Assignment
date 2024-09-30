@@ -1,0 +1,38 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+
+.logos {
+
+   display: none;
+   .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+   }
+   
+   .logos__cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid c.$clr-grey-300;
+      border-radius: 0.5rem;
+      margin: 0 auto;
+   }
+   
+   img {
+      max-width: 80%;
+      aspect-ratio: 1;
+   }
+
+   @include b.breakpoint(768) {
+      display: block;
+      .logos__cards:nth-last-of-type(-n+2) {
+         display: none;
+      }
+   }
+
+   @include b.breakpoint(1400) {
+      .container { grid-template-columns: repeat(6, 1fr); }  
+      .logos__cards:nth-last-of-type(-n+2) { display: flex; }
+   }
+}
