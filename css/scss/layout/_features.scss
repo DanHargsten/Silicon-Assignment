@@ -1,0 +1,33 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/typography-variables' as tv;
+@use '../base/typography-style' as ts;
+
+.features {
+
+.features__heading {
+   .heading-title {
+      @include tv.font(28, c.$clr-1, 800);
+      @include b.breakpoint(1400) {
+         @include tv.font(40, c.$clr-grey-900, 800)
+      }
+   }
+
+   .heading-subtext {
+      @include tv.font(18, c.$clr-2);
+      @include b.breakpoint(1400) {
+         color: c.$clr-grey-600;
+      }
+   }
+
+
+
+
+   
+}      
+.feature-item {
+   .fs-h5 { color: c.$clr-1; }
+   .fs-md { color: c.$clr-2; }
+}
+}

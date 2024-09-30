@@ -13,12 +13,12 @@
 .fs-d6 { @include t.display-text-style(f.$fs-d6); }
 
 // Headings
-h1 { @include t.heading-text-style(f.$fs-h1); }
-h2 { @include t.heading-text-style(f.$fs-h2); }
-h3 { @include t.heading-text-style(f.$fs-h3); }
-h4 { @include t.heading-text-style(f.$fs-h4); }
-h5 { @include t.heading-text-style(f.$fs-h5); }
-h6 { @include t.heading-text-style(f.$fs-h6); }
+.fs-h1 { @include t.heading-text-style(f.$fs-h1); }
+.fs-h2 { @include t.heading-text-style(f.$fs-h2); }
+.fs-h3 { @include t.heading-text-style(f.$fs-h3); }
+.fs-h4 { @include t.heading-text-style(f.$fs-h4); }
+.fs-h5 { @include t.heading-text-style(f.$fs-h5); }
+.fs-h6 { @include t.heading-text-style(f.$fs-h6); }
 
 // Body text
 .f-xl { @include t.body-text-style(f.$fs-xl) }

@@ -4,8 +4,11 @@
 
 
 
-@mixin font($size, $weight: 400) {
+@mixin font($size, $color: null, $weight: 400) {
    font-size: fun.rem($size);
+   @if $color != null {
+      color: $color;
+   }
    font-weight: $weight;
 }
 

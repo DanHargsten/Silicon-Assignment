@@ -11,6 +11,7 @@
    }
    
    .logos__cards {
+      padding-inline: 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,6 +23,7 @@
    img {
       max-width: 80%;
       aspect-ratio: 1;
+      object-fit: contain
    }
 
    @include b.breakpoint(768) {
