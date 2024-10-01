@@ -6,43 +6,78 @@
 
 .features {
    padding-block: 2.2em;
+   @include b.breakpoint(1400) {
+      padding-top: 5rem;
+   }
+
+   .container {
+      @include b.breakpoint(1400) {
+         display: grid;
+         grid-template-areas: "phone heading"
+                              "phone feature";
+      }
+   }
 
    .features__image {
+      grid-area: phone;
       display: none;
+
+      @include b.breakpoint(1400) {
+         display: block;
+         padding-right: 14rem;
+      }
    }
 
    .features__heading {
-      .heading-title {
+      grid-area: heading;
+
+      .features__title {
          @include tv.font(28, c.$clr-1, 800);
          text-align: center;
 
          @include b.breakpoint(1400) {
-            @include tv.font(40, c.$clr-grey-900, 800)
+            @include tv.font(40, c.$clr-grey-900, 800);
+            text-align: left;
          }
       }
 
-      .heading-subtext {
+      .features__subtext {
          @include tv.font(18, c.$clr-2);
          text-align: center;
+         padding-block: 1em;
+         padding-inline: 0.75em;
 
          @include b.breakpoint(1400) {
             color: c.$clr-grey-600;
+            text-align: left;
          }
       }
    }   
     
 
-   .features-grid {
+   .features__grid {
+      grid-area: feature;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
 
+      @include b.breakpoint(768) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: repeat(3, auto);
+         gap: 3rem;         
+      }
+      @include b.breakpoint(1400) {
+         gap: 0rem;
+      }
 
       .feature-item {
          display: grid;
-         grid-template-columns: 1fr auto;
+         grid-template-columns: auto 1fr;
          gap: 1.5rem;
          padding-inline: 0.75em;
          padding-block: 1em;
 
-         .feature-item-img {
+         .feature-item__img {
             width: 3.75rem;
             height: 3.75rem;
             border-radius: 0.5rem;

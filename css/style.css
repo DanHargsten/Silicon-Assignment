@@ -232,41 +232,84 @@ button {
 .features {
   padding-block: 2.2em;
 }
+@media (width >= 87.5rem) {
+  .features {
+    padding-top: 5rem;
+  }
+}
+@media (width >= 87.5rem) {
+  .features .container {
+    display: grid;
+    grid-template-areas: "phone heading" "phone feature";
+  }
+}
 .features .features__image {
+  grid-area: phone;
   display: none;
 }
-.features .features__heading .heading-title {
+@media (width >= 87.5rem) {
+  .features .features__image {
+    display: block;
+    padding-right: 14rem;
+  }
+}
+.features .features__heading {
+  grid-area: heading;
+}
+.features .features__heading .features__title {
   font-size: 1.75rem;
   color: #131022;
   font-weight: 800;
   text-align: center;
 }
 @media (width >= 87.5rem) {
-  .features .features__heading .heading-title {
+  .features .features__heading .features__title {
     font-size: 2.5rem;
     color: #0B0F19;
     font-weight: 800;
+    text-align: left;
   }
 }
-.features .features__heading .heading-subtext {
+.features .features__heading .features__subtext {
   font-size: 1.125rem;
   color: #585C7B;
   font-weight: 400;
   text-align: center;
+  padding-block: 1em;
+  padding-inline: 0.75em;
 }
 @media (width >= 87.5rem) {
-  .features .features__heading .heading-subtext {
+  .features .features__heading .features__subtext {
     color: #9397AD;
+    text-align: left;
   }
 }
-.features .features-grid .feature-item {
+.features .features__grid {
+  grid-area: feature;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+@media (width >= 48rem) {
+  .features .features__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 3rem;
+  }
+}
+@media (width >= 87.5rem) {
+  .features .features__grid {
+    gap: 0rem;
+  }
+}
+.features .features__grid .feature-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 1.5rem;
   padding-inline: 0.75em;
   padding-block: 1em;
 }
-.features .features-grid .feature-item .feature-item-img {
+.features .features__grid .feature-item .feature-item__img {
   width: 3.75rem;
   height: 3.75rem;
   border-radius: 0.5rem;
@@ -275,23 +318,23 @@ button {
   justify-content: center;
   align-items: center;
 }
-.features .features-grid .feature-item .feature-item-heading {
+.features .features__grid .feature-item .feature-item-heading {
   font-size: 1.25rem;
   color: #131022;
   font-weight: 800;
 }
 @media (width >= 87.5rem) {
-  .features .features-grid .feature-item .feature-item-heading {
+  .features .features__grid .feature-item .feature-item-heading {
     color: #0B0F19;
   }
 }
-.features .features-grid .feature-item .feature-item-subtext {
+.features .features__grid .feature-item .feature-item-subtext {
   font-size: 1rem;
   color: #585C7B;
   font-weight: 400;
 }
 @media (width >= 87.5rem) {
-  .features .features-grid .feature-item .feature-item-subtext {
+  .features .features__grid .feature-item .feature-item-subtext {
     color: #565973;
   }
 }
