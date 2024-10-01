@@ -5,29 +5,69 @@
 @use '../base/typography-style' as ts;
 
 .features {
+   padding-block: 2.2em;
 
-.features__heading {
-   .heading-title {
-      @include tv.font(28, c.$clr-1, 800);
-      @include b.breakpoint(1400) {
-         @include tv.font(40, c.$clr-grey-900, 800)
-      }
+   .features__image {
+      display: none;
    }
 
-   .heading-subtext {
-      @include tv.font(18, c.$clr-2);
-      @include b.breakpoint(1400) {
-         color: c.$clr-grey-600;
+   .features__heading {
+      .heading-title {
+         @include tv.font(28, c.$clr-1, 800);
+         text-align: center;
+
+         @include b.breakpoint(1400) {
+            @include tv.font(40, c.$clr-grey-900, 800)
+         }
+      }
+
+      .heading-subtext {
+         @include tv.font(18, c.$clr-2);
+         text-align: center;
+
+         @include b.breakpoint(1400) {
+            color: c.$clr-grey-600;
+         }
+      }
+   }   
+    
+
+   .features-grid {
+
+
+      .feature-item {
+         display: grid;
+         grid-template-columns: 1fr auto;
+         gap: 1.5rem;
+         padding-inline: 0.75em;
+         padding-block: 1em;
+
+         .feature-item-img {
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 0.5rem;
+            background-color: rgba(c.$clr-primary, 0.08);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+       
+      .feature-item-heading {
+         @include tv.font(20, c.$clr-1, 800);
+         @include b.breakpoint(1400) {
+            color: c.$clr-grey-900;
+         }
+      }
+
+      .feature-item-subtext {
+         @include tv.font(16, c.$clr-2);
+         @include b.breakpoint(1400) {
+            color: c.$clr-grey-700;
+         }
       }
    }
-
-
-
-
+}
    
-}      
-.feature-item {
-   .fs-h5 { color: c.$clr-1; }
-   .fs-md { color: c.$clr-2; }
 }
-}
+
+

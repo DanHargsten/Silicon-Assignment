@@ -1,11 +1,11 @@
 @use '../abstracts/colors' as c;
-@use '../abstracts/functions' as fun;
+@use '../abstracts/functions' as fn;
 @use '../abstracts/fonts' as f;
 
 
 
 @mixin font($size, $color: null, $weight: 400) {
-   font-size: fun.rem($size);
+   font-size: fn.rem($size);
    @if $color != null {
       color: $color;
    }
