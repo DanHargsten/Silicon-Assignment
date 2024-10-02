@@ -1,0 +1,81 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/typography-variables' as tv;
+
+.faq {
+   // @include b.breakpoint(768) {
+   //    display: flex;
+   //    flex-direction: column;
+   // }
+
+   // @include b.breakpoint(1400) {
+   //    display: grid;
+   //    // grid-template-columns: 2fr 1fr;
+   //    grid-template-areas: "heading faq"
+   //                         "contact faq";
+   //    gap: 3rem;
+   //}
+
+   .faq__heading {
+      grid-area: heading;
+      text-align: center;
+      padding-inline: 1rem;
+
+      h2 {
+         padding-bottom: 1em;
+         @include tv.font(24, c.$clr-1, 800);
+      }
+
+      p {
+         padding-bottom: 3em;
+         @include tv.font(18, c.$clr-2);  
+         text-wrap: pretty;
+      }
+   }
+
+   .faq__accordion {
+      grid-area: faq;
+      margin-inline: 0.75rem;
+      padding-inline: 1.5em;
+      border: 1px solid c.$clr-grey-300;
+      border-radius: 1rem;
+      
+      @include b.breakpoint(1400) {
+         display: flex;
+         flex-direction: column;
+      }
+
+      .faq__question {
+         display: flex;
+         align-items: center;
+         gap: 2rem;
+         
+         p {
+            @include tv.font(16, c.$clr-1, 600);
+            border-bottom: 1px solid c.$clr-grey-300;
+            padding-block: 1em;
+         }
+
+         button {
+            background-color: transparent;
+            border: none;
+         }
+      }
+   }
+
+
+
+   .faq__contact {
+      grid-area: contact;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+   }
+
+
+
+
+
+}

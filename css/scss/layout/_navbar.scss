@@ -8,6 +8,7 @@ position: relative;
 // padding: 1rem 2rem;
 background-color: c.$clr-bg;
 
+// From Joakim 
 .skip-link {
    position: absolute;
    top: 5rem;
@@ -41,8 +42,7 @@ background-color: c.$clr-bg;
    gap: 0.5rem;
    
    &-name {      
-      @include t.font(22, 800);
-      color: c.$clr-1;
+      @include t.font(22, c.$clr-1, 800);
       margin-bottom: 0.1rem;
    }
 }

@@ -1,0 +1,58 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/typography-variables' as t;
+// @use '../components/buttons' as bu;
+@use '../abstracts/button-variables' as bv;
+
+.sub {
+
+   .sub__container {
+      border-radius: 0.5rem;
+      margin-inline: 0.75em;
+      padding-block: 1rem;
+      background-color: c.$clr-grey-100;
+      
+      @include b.breakpoint(1400) {
+         margin: 0;
+      }
+   }
+
+   .sub__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      // &-icon {
+
+      // }
+
+      &-title {
+         @include t.font(22, c.$clr-1, 800);
+
+         @include b.breakpoint(1400) {            
+            @include t.font(24, c.$clr-grey-900, 800);
+            &:after {
+               content: " to stay informed about latest updates";
+            }
+         }
+      }
+   }
+
+   .sub__input {
+      display: flex;
+      justify-content: center;
+
+      .mail-input {
+         border: 1px solid c.$clr-grey-400;
+         border-radius: 0.5em 0 0 0.5em;
+
+         @include t.font(16, c.$clr-grey-900);
+      }
+
+      .mail-input-btn {
+         @include bv.btn-size(large);
+         border-radius: 0 0.5em 0.5em 0;
+      }
+   }
+}

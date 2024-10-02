@@ -12,13 +12,14 @@ $clr-primary: #6366F1;
 $clr-info: #4C82F7;
 $clr-nav: #33354D;   
 
-$clr-1: #131022; // KOLLA UPP    market-btn, app-features mobile
-$clr-2: #585C7B; // KOLLA UPP    discover more, app-features
+// Used on a plethoria of stuff. 
+$clr-1: #131022; 
+$clr-2: #585C7B; 
 
 
 $clr-bg: #FFFFFF;
 $clr-bg-gradient: linear-gradient(to top,
-rgba(99,102,241,0.15) 0%,
+rgba(99,102,241,0.10) 0%,
 rgba(218,70,239,0.05) 42%,
 rgba(0,0,0,0.02) 83%);
 

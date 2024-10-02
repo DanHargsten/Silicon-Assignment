@@ -19,12 +19,13 @@
    }
 
    .features__image {
+      //border: 1px solid blue; // VISUALISERING
       grid-area: phone;
       display: none;
 
       @include b.breakpoint(1400) {
          display: block;
-         padding-right: 14rem;
+         padding-right: 14rem;          // Kolla med lärare här...
       }
    }
 
@@ -50,6 +51,9 @@
          @include b.breakpoint(1400) {
             color: c.$clr-grey-600;
             text-align: left;
+            padding-left: 0;
+            margin-top: -0.5rem;
+            margin-bottom: -3rem;         // Kolla med lärare här...
          }
       }
    }   
@@ -63,19 +67,25 @@
 
       @include b.breakpoint(768) {
          grid-template-columns: 1fr 1fr;
-         grid-template-rows: repeat(3, auto);
          gap: 3rem;         
       }
       @include b.breakpoint(1400) {
-         gap: 0rem;
+         gap: 0.5rem;
       }
 
       .feature-item {
+         border: 1px solid red; // VISUALISERING
+
          display: grid;
          grid-template-columns: auto 1fr;
          gap: 1.5rem;
          padding-inline: 0.75em;
          padding-block: 1em;
+
+         @include b.breakpoint(1400) {
+            padding-left: 0;
+            padding-right: 0.75em;
+         }
 
          .feature-item__img {
             width: 3.75rem;
@@ -87,10 +97,11 @@
             align-items: center;
          }
        
-      .feature-item-heading {
-         @include tv.font(20, c.$clr-1, 800);
-         @include b.breakpoint(1400) {
-            color: c.$clr-grey-900;
+         .feature-item-heading {
+            @include tv.font(20, c.$clr-1, 800);
+            @include b.breakpoint(1400) {
+               color: c.$clr-grey-900;               
+            }
          }
       }
 
@@ -98,11 +109,8 @@
          @include tv.font(16, c.$clr-2);
          @include b.breakpoint(1400) {
             color: c.$clr-grey-700;
+            text-wrap: pretty;      // Kolla med lärare här...
          }
       }
-   }
+   }   
 }
-   
-}
-
-

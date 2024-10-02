@@ -11,6 +11,9 @@
    @include bv.btn-size('small');
 }
 
+.btn-large {
+   @include bv.btn-size('large');
+}
 
 
 .btn-market {

@@ -1,0 +1,22 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/typography-variables' as tv;
+
+footer {
+   
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include b.breakpoint(768) {
+         flex-direction: row;
+         gap: 0.3rem;
+      }
+   }
+
+   p {
+      @include tv.font(14, c.$clr-grey-600);
+   }
+}
