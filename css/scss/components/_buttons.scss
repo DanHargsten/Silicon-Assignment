@@ -11,6 +11,10 @@
    @include bv.btn-size('small');
 }
 
+.btn-medium {
+   @include bv.btn-size('medium');
+}
+
 .btn-large {
    @include bv.btn-size('large');
 }

@@ -1,4 +1,5 @@
 @use '../abstracts/breakpoints' as b;
+@use '../abstracts/button-variables' as bv;
 @use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/typography-variables' as tv;
@@ -25,6 +26,7 @@
       h2 {
          padding-bottom: 1em;
          @include tv.font(24, c.$clr-1, 800);
+         width: 90%;
       }
 
       p {
@@ -38,7 +40,8 @@
       grid-area: faq;
       margin-inline: 0.75rem;
       padding-inline: 1.5em;
-      border: 1px solid c.$clr-grey-300;
+      border: 3px solid red;
+      // border: 1px solid c.$clr-grey-300;
       border-radius: 1rem;
       
       @include b.breakpoint(1400) {
@@ -49,22 +52,36 @@
       .faq__question {
          display: flex;
          align-items: center;
+         justify-content: space-between;
          gap: 2rem;
+         margin-top: 1rem;
+         border: 1px solid c.$clr-grey-300;
+         // border-bottom: 3px solid red;
          
          p {
             @include tv.font(16, c.$clr-1, 600);
-            border-bottom: 1px solid c.$clr-grey-300;
+            // border: 1px solid c.$clr-grey-300;
             padding-block: 1em;
+            padding-left: 1.5em;
+            text-wrap: pretty;
          }
 
          button {
             background-color: transparent;
             border: none;
          }
+
+         i {
+            background-color: c.$clr-grey-100;
+         }
+      }
+
+      .faq__answer {
+         padding-block: 1em;
+         // border-bottom: 3px solid red;
+         // border-bottom: 1px solid c.$clr-grey-300;
       }
    }
-
-
 
    .faq__contact {
       grid-area: contact;
@@ -72,10 +89,31 @@
       justify-content: center;
       align-items: center;
       gap: 1rem;
+      
+      .contact-box {
+         padding-block: 4em;
+      }
+      
+      .contact-box-btn {
+         @include bv.btn-size('medium');
+         @include bv.btn-primary();
+      
+         &::after {
+            content: " now";
+         }
+      }
+
+      .contact-box-text {
+         display: none;
+      }
+      
+      .contact-box-hide {
+         display: none;
+      }
    }
-
-
-
-
-
+   
+   
+   
+   
+   
 }
