@@ -438,6 +438,89 @@ button {
   }
 }
 
+.features-extended {
+  padding: 4em 0;
+}
+@media (width < 87.5rem) {
+  .features-extended {
+    display: none;
+  }
+}
+.features-extended .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.5rem;
+}
+.features-extended .features-extended__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+.features-extended .features-extended__container .features-extended__info .features-extended__title {
+  font-size: 2rem;
+  color: #0B0F19;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.features-extended .features-extended__container .features-extended__info .features-extended__list {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.features-extended .features-extended__container .features-extended__info .features-extended__list li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #565973;
+  font-weight: 400;
+}
+.features-extended .features-extended__container .features-extended__info .features-extended__list li::before {
+  content: url("/images/icons/check-circle.svg");
+  margin-right: 0.5rem;
+  margin-top: 0.4rem;
+}
+.features-extended .features-extended__container .features-extended__info a.btn-medium {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.8em 2.2em;
+  font-size: 14px;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+.features-extended .features-extended__container .features-extended__info span {
+  margin-top: 0.1rem;
+}
+.features-extended .features-extended__container .features-extended__icons {
+  display: flex;
+  gap: 2.5rem;
+}
+.features-extended .features-extended__container .features-extended__icons .icon-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 15rem;
+  padding-block: 2.5em;
+}
+.features-extended .features-extended__container .features-extended__icons .icon-block .icon-block-image {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(99, 102, 241, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features-extended .features-extended__container .features-extended__description {
+  font-size: 1rem;
+  color: #565973;
+  font-weight: 400;
+}
+
 footer .container {
   display: flex;
   flex-direction: column;

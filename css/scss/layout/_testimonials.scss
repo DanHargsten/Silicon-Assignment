@@ -14,9 +14,7 @@
       gap: 1.5rem;
    }
 
-   &__heading {
-      @include tv.font(40, c.$clr-grey-900, 800);
-   }
+   &__heading { @include tv.font(40, c.$clr-grey-900, 800); }
 
    &__card {
       position: relative;
@@ -51,10 +49,10 @@
          .testimonials__user-text {
             display: flex;
             flex-direction: column;
+            
             .testimonials__user-name { @include tv.font(16, c.$clr-grey-900, 700); }
             .testimonials__user-role { @include tv.font(14, c.$clr-grey-600); }
          }
       }
    }
-
 }
