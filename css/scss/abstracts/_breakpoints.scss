@@ -5,15 +5,6 @@
 
 @use '../abstracts/functions' as f;
 
-// $breakpoints-up: (
-//    'sm': f.rem(576),      
-//    'md': f.rem(720),
-//    'lg': f.rem(992),
-//    'xl': f.rem(1200),
-//    'xxl': f.rem(1400)
-// );
-
-
 @mixin breakpoint($size, $direction: 'min') {
    $value: f.rem($size);
 

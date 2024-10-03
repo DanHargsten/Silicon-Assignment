@@ -40,8 +40,8 @@
       grid-area: faq;
       margin-inline: 0.75rem;
       padding-inline: 1.5em;
-      border: 3px solid red;
-      // border: 1px solid c.$clr-grey-300;
+      // border: 3px solid red;
+      border: 1px solid c.$clr-grey-300;
       border-radius: 1rem;
       
       @include b.breakpoint(1400) {
@@ -53,22 +53,20 @@
          display: flex;
          align-items: center;
          justify-content: space-between;
-         gap: 2rem;
-         margin-top: 1rem;
-         border: 1px solid c.$clr-grey-300;
-         // border-bottom: 3px solid red;
+         // gap: 2rem;
+         height: 4.5rem;
          
          p {
             @include tv.font(16, c.$clr-1, 600);
-            // border: 1px solid c.$clr-grey-300;
             padding-block: 1em;
-            padding-left: 1.5em;
+            padding-left: 0.5em;
             text-wrap: pretty;
          }
 
          button {
             background-color: transparent;
             border: none;
+            // padding-right: 1em;
          }
 
          i {
@@ -78,8 +76,9 @@
 
       .faq__answer {
          padding-block: 1em;
-         // border-bottom: 3px solid red;
-         // border-bottom: 1px solid c.$clr-grey-300;
+         padding-inline: 1.5em;
+         margin-inline: -1.6rem;   // Kolla upp bättre lösning
+         border-block: 1px solid c.$clr-grey-300;
       }
    }
 

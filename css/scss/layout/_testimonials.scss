@@ -1,0 +1,60 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/typography-variables' as tv;
+
+.testimonials {
+   background-color: c.$clr-grey-100;
+   padding-block: 5em;
+
+   @include b.breakpoint(1400, max) { display: none; }
+   
+   .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+   }
+
+   &__heading {
+      @include tv.font(40, c.$clr-grey-900, 800);
+   }
+
+   &__card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: c.$clr-bg;
+      border-radius: 0.5rem;
+      padding: 1.5em;
+      padding-top: 3em;
+      gap: 1.5rem;
+      box-shadow: 0 0 4px #00000015;
+
+      .testimonials__quote {
+         position: absolute;
+         top: -6%;
+         left: 1rem;
+         height: 3.8rem;
+      }
+      .testimonials__rating {
+         width: 88px;
+         height: 16px;
+      }
+      
+
+      .testimonials__text { @include tv.font(18, c.$clr-grey-700); }
+      
+      .testimonials__user-info {
+         display: flex;
+         gap: 0.7rem;
+
+         .testimonials__user-text {
+            display: flex;
+            flex-direction: column;
+            .testimonials__user-name { @include tv.font(16, c.$clr-grey-900, 700); }
+            .testimonials__user-role { @include tv.font(14, c.$clr-grey-600); }
+         }
+      }
+   }
+
+}
