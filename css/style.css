@@ -277,14 +277,15 @@ button {
   text-align: center;
   padding-inline: 1rem;
 }
-.faq .faq__heading h2 {
+.faq .faq__heading-title {
   padding-bottom: 1em;
   font-size: 1.5rem;
   color: #131022;
   font-weight: 800;
   width: 90%;
+  margin: 0 auto;
 }
-.faq .faq__heading p {
+.faq .faq__heading-text {
   padding-bottom: 3em;
   font-size: 1.125rem;
   color: #585C7B;
@@ -310,7 +311,7 @@ button {
   justify-content: space-between;
   height: 4.5rem;
 }
-.faq .faq__accordion .faq__question p {
+.faq .faq__accordion .faq__question-text {
   font-size: 1rem;
   color: #131022;
   font-weight: 600;
@@ -318,11 +319,11 @@ button {
   padding-left: 0.5em;
   text-wrap: pretty;
 }
-.faq .faq__accordion .faq__question button {
+.faq .faq__accordion .faq__question .btn-circle {
   background-color: transparent;
   border: none;
 }
-.faq .faq__accordion .faq__question i {
+.faq .faq__accordion .faq__question .btn-circle i {
   background-color: #F3F6FF;
 }
 .faq .faq__accordion .faq__answer {

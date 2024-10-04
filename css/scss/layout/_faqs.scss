@@ -5,31 +5,24 @@
 @use '../abstracts/typography-variables' as tv;
 
 .faq {
-   // @include b.breakpoint(768) {
-   //    display: flex;
-   //    flex-direction: column;
-   // }
 
-   // @include b.breakpoint(1400) {
-   //    display: grid;
-   //    // grid-template-columns: 2fr 1fr;
-   //    grid-template-areas: "heading faq"
-   //                         "contact faq";
-   //    gap: 3rem;
-   //}
+   .container {
+      
+   }
 
    .faq__heading {
       grid-area: heading;
       text-align: center;
       padding-inline: 1rem;
 
-      h2 {
+      &-title {
          padding-bottom: 1em;
          @include tv.font(24, c.$clr-1, 800);
          width: 90%;
+         margin: 0 auto;
       }
 
-      p {
+      &-text {
          padding-bottom: 3em;
          @include tv.font(18, c.$clr-2);  
          text-wrap: pretty;
@@ -40,7 +33,6 @@
       grid-area: faq;
       margin-inline: 0.75rem;
       padding-inline: 1.5em;
-      // border: 3px solid red;
       border: 1px solid c.$clr-grey-300;
       border-radius: 1rem;
       
@@ -48,7 +40,7 @@
          display: flex;
          flex-direction: column;
       }
-
+      
       .faq__question {
          display: flex;
          align-items: center;
@@ -56,22 +48,22 @@
          // gap: 2rem;
          height: 4.5rem;
          
-         p {
+         &-text {
             @include tv.font(16, c.$clr-1, 600);
             padding-block: 1em;
             padding-left: 0.5em;
             text-wrap: pretty;
          }
 
-         button {
+         .btn-circle {
             background-color: transparent;
             border: none;
-            // padding-right: 1em;
+            
+            i {
+               background-color: c.$clr-grey-100;
+            }
          }
 
-         i {
-            background-color: c.$clr-grey-100;
-         }
       }
 
       .faq__answer {
