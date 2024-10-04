@@ -198,6 +198,50 @@ button {
   font-weight: 400;
 }
 
+.slider {
+  background-color: #F3F6FF;
+  padding-top: 5em;
+  padding-bottom: 6em;
+}
+.slider .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slider__heading {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0B0F19;
+  font-weight: 800;
+}
+.slider .slider__carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slider .slider__carousel-container .slider__carousel-images {
+  padding-bottom: 2.5em;
+  display: flex;
+  gap: 5rem;
+  margin: auto;
+}
+.slider .slider__carousel-container .slider__carousel-heading {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: #0B0F19;
+  font-weight: 800;
+}
+.slider .slider__carousel-container .slider__carousel-text {
+  width: 40rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #565973;
+  font-weight: 400;
+}
+
 .container {
   width: 100%;
   margin-inline: auto;

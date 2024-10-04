@@ -1,0 +1,48 @@
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/colors' as c;
+@use '../abstracts/typography-variables' as tv;
+
+.slider {
+   background-color: c.$clr-grey-100;
+   padding-top: 5em;
+   padding-bottom: 6em;
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .slider__heading {
+      margin-bottom: 3rem;
+      text-align: center;
+      @include tv.font(40, c.$clr-grey-900, 800);
+   }
+
+   .slider__carousel-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .slider__carousel-images {
+         padding-bottom: 2.5em;
+         display: flex;
+         gap: 5rem;
+         margin: auto;            
+      }
+
+      .slider__carousel-heading {
+         margin-bottom: 0.75rem;
+         @include tv.font(24, c.$clr-grey-900, 800);   
+      }
+
+      .slider__carousel-text {   
+         width: 40rem;
+         text-align: center;
+         @include tv.font(16, c.$clr-grey-700); 
+      }
+
+   }
+}

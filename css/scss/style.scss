@@ -1,24 +1,25 @@
-@use '../scss/abstracts/animations';
-@use '../scss/abstracts/breakpoints';
-@use '../scss/abstracts/button-variables';
-@use '../scss/abstracts/colors';
-@use '../scss/abstracts/fonts';
-@use '../scss/abstracts/functions';
-@use '../scss/abstracts/typography-variables';
+@use './abstracts/animations';
+@use './abstracts/breakpoints';
+@use './abstracts/button-variables';
+@use './abstracts/colors';
+@use './abstracts/fonts';
+@use './abstracts/functions';
+@use './abstracts/typography-variables';
 
 @use '../scss/base/helpers';
 @use '../scss/base/reset';
 @use '../scss/base/typography-style';
 
-@use '../scss/layout/container';
-@use '../scss/layout/faqs';
-@use '../scss/layout/features';
-@use '../scss/layout/features-extended';
-@use '../scss/layout/footer';
-@use '../scss/layout/logos';
-@use '../scss/layout/navbar';
-@use '../scss/layout/showcase';
-@use '../scss/layout/subscribe';
-@use '../scss/layout/testimonials';
+@use './layout/carousel';
+@use './layout/container';
+@use './layout/faqs';
+@use './layout/features';
+@use './layout/features-extended';
+@use './layout/footer';
+@use './layout/logos';
+@use './layout/navbar';
+@use './layout/showcase';
+@use './layout/subscribe';
+@use './layout/testimonials';
 
-@use '../scss/components/buttons';
+@use './components/buttons';
