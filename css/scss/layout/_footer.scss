@@ -4,11 +4,13 @@
 
 footer {
    
+   // Centering content ensuring layout works on different screen sizes
    .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-block: 1.75em;
 
       @include b.breakpoint(768) {
          flex-direction: row;
@@ -16,7 +18,9 @@ footer {
       }
    }
 
+   // Footer text-styling
    p {
       @include tv.font(14, c.$clr-grey-600);
+      padding-block: 3.375em;
    }
 }

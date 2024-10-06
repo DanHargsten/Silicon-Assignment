@@ -27,7 +27,7 @@
             "headline headline"
             "content image";
      }
-     @include b.breakpoint(1200) {
+     @include b.breakpoint(1400) {
          grid-template-columns: 1fr 1fr;
          grid-template-rows: auto auto;
          grid-template-areas:
@@ -48,7 +48,9 @@
       @include b.breakpoint(768) {
          @include tv.display-text-style(f.$fs-d5);
       }
-      @include b.breakpoint(1200) {          // 1400
+      @include b.breakpoint(1400) {          
+         text-align: left;
+         padding-top: 4rem;
          @include tv.display-text-style(f.$fs-d4);
       }
    }
@@ -59,24 +61,35 @@
 
       @include b.breakpoint(768) {
          text-align: left;
-         padding-left: 2rem;
        }
+
+      @include b.breakpoint(1400) {
+         text-align: left;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+       }
+
        &-text {
          @include tv.body-text-style(f.$fs-lg);
          padding-top: 0.5em;
          width: 90%;
          margin-inline: auto;
          text-wrap: pretty;
+
+         @include b.breakpoint(1400) {
+            width: 100%;
+         }
        }
     }
 
    .showcase__buttons {
-      margin-top: 3rem;       // make helper
+      margin-top: 3rem;       
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      gap: 1rem;              // make helper
+      gap: 1rem;             
 
       @include b.breakpoint(768) { flex-direction: row; }
    }
@@ -88,6 +101,10 @@
       align-items: center;
       gap: 1.2rem;
 
+      @include b.breakpoint(1400) {
+         padding-top: 13rem;
+         padding-bottom: 4rem;
+      }
 
       &-text {
          @include tv.body-text-style(f.$fs-sm, c.$clr-2);
@@ -98,13 +115,24 @@
    // Phone image
    &__image {
       grid-area: image;
+      position: absolute;
+      bottom: 0;
+      right: 0;
       margin-right: 2.1875rem;
       margin-top: 2rem;
       display: none;
-
+   
       @include b.breakpoint(768) {
-         display: block;
-         
+         display: block;         
+      }
+   
+      @include b.breakpoint(1400) {
+         bottom: 6.6rem ;
+         img {
+            width: 100%; 
+            scale: 150%; 
+            height: auto;
+         }
       }
    }
 }

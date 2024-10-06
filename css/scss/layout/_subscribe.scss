@@ -5,32 +5,42 @@
 
 .sub {
 
-   .sub__container {
+   .container {
       border-radius: 0.5rem;
       margin-inline: 0.75em;
-      padding-block: 1rem;
+      padding-block: 4.5rem;
       background-color: c.$clr-grey-100;
+      margin: 0 auto;
+
       
+      // Grid layout for desktop screens
       @include b.breakpoint(1400) {
-         margin: 0;
+         display: grid;
+         grid-template-columns: 55% 45%; // Having the first element take up slightly more space
+         align-items: center;
+         justify-content: center;
+         padding-inline: 6.875em;  // Extra horizontal padding on larger screens
       }
    }
 
+
+   // Header section with the bell icon and title
    .sub__header {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 1rem;
 
-      // &-icon {
-
-      // }
-
+      // Title text styling
       &-title {
          @include t.font(22, c.$clr-1, 800);
 
+         
+         // Adjust font size for larger screens
          @include b.breakpoint(1400) {            
             @include t.font(24, c.$clr-grey-900, 800);
+            
+            //...and add extra text to show
             &:after {
                content: " to stay informed about latest updates";
             }
@@ -38,20 +48,39 @@
       }
    }
 
+   // Email form with an input field and button
    .sub__input {
+      position: relative; // Positioning for the envelope icon
       display: flex;
       justify-content: center;
 
+      // Email input field
       .mail-input {
          border: 1px solid c.$clr-grey-400;
          border-radius: 0.5em 0 0 0.5em;
+         width: 20rem; // Fixed width
+         padding-left: 2rem; // Make space for the envelope icon
 
          @include t.font(16, c.$clr-grey-900);
+
+         &::placeholder {
+            color: c.$clr-grey-500; // Lighter color for placeholder text (Your Email)   
+         }
       }
 
+      // Subscribe button next to input field
       .mail-input-btn {
          @include bv.btn-size(large);
-         border-radius: 0 0.5em 0.5em 0;
+         border-radius: 0 0.5em 0.5em 0; // Rounded corners on right side only
+      }
+
+      // Envelope icon inside the input field
+      .sub__input-envelope {
+         position: absolute;
+         left: 1.5rem;
+         top: 50%;
+         transform: translateY(-50%);
+         color: c.$clr-grey-500;
       }
    }
 }

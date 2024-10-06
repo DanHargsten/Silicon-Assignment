@@ -6,6 +6,7 @@
    background-color: c.$clr-grey-100;
    padding-block: 5em;
 
+   // Hide the section on screens smaller than 1400px
    @include b.breakpoint(1400, max) { display: none; }
    
    .container {
@@ -14,8 +15,10 @@
       gap: 1.5rem;
    }
 
+   // Main heading for testimonials
    &__heading { @include tv.font(40, c.$clr-grey-900, 800); }
 
+   // Styling for each card
    &__card {
       position: relative;
       display: flex;
@@ -26,8 +29,9 @@
       padding: 1.5em;
       padding-top: 3em;
       gap: 1.5rem;
-      box-shadow: 0 0 4px #00000015;
+      box-shadow: 0 0 4px #00000015; // Subtle shadow for depth
 
+   // Quote icon inside each card
       .testimonials__quote {
          position: absolute;
          top: -6%;
@@ -39,12 +43,12 @@
          height: 16px;
       }
       
-
       .testimonials__text { @include tv.font(18, c.$clr-grey-700); }
       
+      // User info section
       .testimonials__user-info {
          display: flex;
-         gap: 0.7rem;
+         gap: 0.7rem;  // Space between user photo and text
 
          .testimonials__user-text {
             display: flex;

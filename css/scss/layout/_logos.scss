@@ -2,16 +2,19 @@
 @use '../abstracts/colors' as c;
 
 .logos {
-
    display: none;
+
    .container {
+      padding-top: 6em;
+      padding-bottom: 3em;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
    }
    
    .logos__cards {
-      padding-inline: 1rem;
+      width: 169px;
+      height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
